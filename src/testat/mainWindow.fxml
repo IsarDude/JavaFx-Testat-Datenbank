@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testat.MainController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <BorderPane prefHeight="475.0" prefWidth="500.0">
+            <left>
+                <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </left>
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Datei">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Speichern" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleLoad" text="Laden" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Bearbeiten">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleNew" text="Einfügen" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleChange" text="Ändern" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleDelete" text="Löschen" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label prefWidth="73.0" text="Details:">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Name:" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Vorname" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Straße:" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Postleitzahl:" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Ort:" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="na" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="vo" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="ps" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="ort" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                        <Label text="Hausnummer:" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="st" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="nr" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin></TextField>
+                    </children>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </children>
+</GridPane>
